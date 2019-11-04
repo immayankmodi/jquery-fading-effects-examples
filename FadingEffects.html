@@ -1,0 +1,239 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>JQuery fadeIn, fadeOut, fadeToggle, fadeTo effects to DIV examples</title>
+    <style type="text/css">
+        .divFadeExamples
+        {
+            background: #e5e5e5;
+            color: #222;
+            padding: 5px;
+            min-height: 50px;
+        }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //fadeIn effect examples
+            $("#btnFadeInSlow").click(function () {
+                $("#fadeInDIV").hide("fast"); //first reset div
+                $("#fadeInDIV").fadeIn("slow"); //main code for "slow" fadeIn
+                return false;
+            });
+            $("#btnFadeInFast").click(function () {
+                $("#fadeInDIV").hide("fast"); //first reset div
+                $("#fadeInDIV").fadeIn("fast"); //main code for "fast" fadeIn
+                return false;
+            });
+            $("#btnFadeInMiliSec").click(function () {
+                $("#fadeInDIV").hide("fast"); //first reset div
+                $("#fadeInDIV").fadeIn(4000); //main code 4sec delay
+                return false;
+            });
+            $("#btnFadeInText").click(function () {
+                $("#fadeInDIV, #fadeInDIV > p").hide("fast"); //first reset div, text
+                $("#fadeInDIV").show("fast"); //show div first
+                $("#fadeInDIV > p").fadeIn(3000); //main code 3sec delay
+                return false;
+            });
+
+            //fadeOut effect examples
+            $("#btnFadeOutSlow").click(function () {
+                $("#fadeOutDIV").show("fast"); //first reset div
+                $("#fadeOutDIV").fadeOut("slow"); //main code for "slow" fadeOut
+                return false;
+            });
+            $("#btnFadeOutFast").click(function () {
+                $("#fadeOutDIV").show("fast"); //first reset div
+                $("#fadeOutDIV").fadeOut("fast"); //main code for "fast" fadeOut
+                return false;
+            });
+            $("#btnFadeOutMiliSec").click(function () {
+                $("#fadeOutDIV").show("fast"); //first reset div
+                $("#fadeOutDIV").fadeOut(4000); //main code 4sec delay
+                return false;
+            });
+            $("#btnFadeOutText").click(function () {
+                $("#fadeOutDIV, #fadeOutDIV > p").show("fast"); //first reset div, text
+                $("#fadeOutDIV > p").fadeOut(3000); //main code 3sec delay
+                return false;
+            });
+
+            //fadeToggle effect examples
+            $("#btnFadeToggleSlow").click(function () {
+                $("#fadeToggleDIV").fadeToggle("slow"); //main code for "slow" fadeOut
+                return false;
+            });
+            $("#btnFadeToggleFast").click(function () {
+                $("#fadeToggleDIV").fadeToggle("fast"); //main code for "fast" fadeOut
+                return false;
+            });
+            $("#btnFadeToggleMiliSec").click(function () {
+                $("#fadeToggleDIV").fadeToggle(4000); //main code 4sec delay
+                return false;
+            });
+            $("#btnFadeToggleText").click(function () {
+                $("#fadeToggleDIV, #fadeToggleDIV > p").show("fast"); //first reset div, text
+                $("#fadeToggleDIV > p").fadeToggle(3000); //main code 3sec delay
+                return false;
+            });
+
+            //fadeTo effect examples
+            $("#btnFadeToSlow").click(function () {
+                $("#fadeToDIV").fadeTo("fast", 1); //first reset div
+                $("#fadeToDIV").fadeTo("slow", 0.2); //main code for "slow" fadeOut
+                return false;
+            });
+            $("#btnFadeToFast").click(function () {
+                $("#fadeToDIV").fadeTo("fast", 1); //first reset div
+                $("#fadeToDIV").fadeTo("fast", 0.7); //main code for "fast" fadeOut
+                return false;
+            });
+            $("#btnFadeToMiliSec").click(function () {
+                $("#fadeToDIV").fadeTo("fast", 1); //first reset div
+                $("#fadeToDIV").fadeTo(4000, 0.3); //main code 4sec delay
+                return false;
+            });
+            $("#btnFadeToText").click(function () {
+                $("#fadeToDIV, #fadeToDIV > p").fadeTo("fast", 1); //first reset div, text
+                $("#fadeToDIV > p").fadeTo(3000, 0.6); //main code 3sec delay
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table>
+        <tr>
+            <td colspan="4">
+                <b>jQuery fadeIn effect examples</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="btnFadeInSlow">
+                    fadeIn Slow</button>
+            </td>
+            <td>
+                <button id="btnFadeInFast">
+                    fadeIn Fast</button>
+            </td>
+            <td>
+                <button id="btnFadeInMiliSec">
+                    fadeIn MiliSec</button>
+            </td>
+            <td>
+                <button id="btnFadeInText">
+                    fadeIn Text</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div id="fadeInDIV" class="divFadeExamples">
+                    <p>
+                        some text here..
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <b>jQuery fadeOut effect examples</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="btnFadeOutSlow">
+                    fadeOut Slow</button>
+            </td>
+            <td>
+                <button id="btnFadeOutFast">
+                    fadeOut Fast</button>
+            </td>
+            <td>
+                <button id="btnFadeOutMiliSec">
+                    fadeOut MiliSec</button>
+            </td>
+            <td>
+                <button id="btnFadeOutText">
+                    fadeOut Text</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div id="fadeOutDIV" class="divFadeExamples">
+                    <p>
+                        some text here..
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <b>jQuery fadeToggle effect examples</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="btnFadeToggleSlow">
+                    fadeToggle Slow</button>
+            </td>
+            <td>
+                <button id="btnFadeToggleFast">
+                    fadeToggle Fast</button>
+            </td>
+            <td>
+                <button id="btnFadeToggleMiliSec">
+                    fadeToggle MiliSec</button>
+            </td>
+            <td>
+                <button id="btnFadeToggleText">
+                    fadeToggle Text</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div id="fadeToggleDIV" class="divFadeExamples">
+                    <p>
+                        some text here..
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <b>jQuery fadeTo effect examples</b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button id="btnFadeToSlow">
+                    fadeTo Slow</button>
+            </td>
+            <td>
+                <button id="btnFadeToFast">
+                    fadeTo Fast</button>
+            </td>
+            <td>
+                <button id="btnFadeToMiliSec">
+                    fadeTo MiliSec</button>
+            </td>
+            <td>
+                <button id="btnFadeToText">
+                    fadeTo Text</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div id="fadeToDIV" class="divFadeExamples">
+                    <p>
+                        some text here..
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
